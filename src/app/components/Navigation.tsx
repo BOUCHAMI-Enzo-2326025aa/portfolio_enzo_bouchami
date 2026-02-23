@@ -41,9 +41,11 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <button
             onClick={() => scrollToSection('accueil')}
-            className="text-xl tracking-wider hover:text-primary transition-colors"
+            className="text-2xl hover:text-primary transition-colors"
+            style={{ fontFamily: 'var(--font-logo)' }}
+            aria-label="Aller à l'accueil"
           >
-            PORTFOLIO
+            Enzo Bouchami
           </button>
 
           {/* Desktop Navigation */}
@@ -64,6 +66,7 @@ export function Navigation() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden"
+            aria-label={isMobileMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

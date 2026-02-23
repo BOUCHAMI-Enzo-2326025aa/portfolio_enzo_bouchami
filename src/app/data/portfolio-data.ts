@@ -10,7 +10,7 @@ export const personalInfo = {
   title: "Étudiant en Développement Informatique",
   bio: "Étudiant passionné en développement informatique à la recherche d'opportunités pour développer mes compétences et contribuer à des projets innovants.",
   availability:
-    "Je suis actuellement à la recherche d'opportunités de stage ou d'alternance à partir de [Date]. N'hésitez pas à me contacter pour discuter de vos besoins.",
+    "Je suis actuellement à la recherche d'opportunités d'alternance à partir de Août 2026. N'hésitez pas à me contacter.",
 
   // Contact
   email: "enzo.bouchami@gmail.com",
@@ -154,13 +154,15 @@ export const education = [
   {
     year: "2023 - 2026",
     title: "BUT Informatique",
-    institution: "IUT Aix-Marseille site d'Aix-en-Provence",
+    institution: "IUT Aix-Marseille",
+    location : "Aix-en-Provence",
     description: "Parcours A : Réalisation d’applications : conception, développement, validation",
   },
   {
     year: "2023",
     title: "Baccalauréat Général - Mention Bien",
     institution: "Lycée Maurice Janetti",
+    location : "Saint-Maximin-la-Sainte-Baume",
     description: "Spécialité Numérique et Sciences informatiques (NSI) et Mathématiques",
   },
 ];
@@ -172,7 +174,8 @@ export const experience = [
   {
     year: "Mars 2026 - Juillet 2026",
     title: "Stage en développement informatique",
-    company: "Métrpole Aix-Marseille-Provence",
+    company: "Métropole Aix-Marseille-Provence",
+    location: "Marseille",
     description:
       "Stage à venir",
   },
@@ -180,13 +183,15 @@ export const experience = [
     year: "Avril 2025 - Juin 2025",
     title: "Stage en développement informatique",
     company: "Caisse nationale militaire de sécurité sociale (CNMSS)",
+    location: "Toulon",
     description:
       "Modifications des applications web interne, développement de nouvelles fonctionnalités et correction de bugs.",
   },
   {
     year: "Septembre 2025 - Janvier 2026",
     title: "Projet Universitaire VA-Productions",
-    company: "IUT Aix-Marseille site d'Aix-en-Provence",
+    company: "VA-Productions",
+    location: "Aix-en-Provence",
     description:
       "Développement d'un CRM pour une PME de production de magazines publicitaires, allant de la prospection à la facturation en collaboration avec une équipe de 5 étudiants.",
   },

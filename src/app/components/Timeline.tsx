@@ -32,8 +32,11 @@ export function Timeline() {
                     <span className="text-sm text-primary">{item.year}</span>
                   </div>
                   <h4 className="mb-1">{item.title}</h4>
-                  <p className="text-muted-foreground mb-2">{item.institution}</p>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                  <p className="text-muted-foreground mb-2">
+                    {item.institution}
+                    {('location' in item && item.location) ? ` — ${item.location}` : ''}
+                  </p>
+                  <p className="text-sm text-muted-foreground whitespace-pre-line">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -56,8 +59,11 @@ export function Timeline() {
                     <span className="text-sm text-primary">{item.year}</span>
                   </div>
                   <h4 className="mb-1">{item.title}</h4>
-                  <p className="text-muted-foreground mb-2">{item.company}</p>
-                  <p className="text-sm text-muted-foreground">{item.description}</p>
+                  <p className="text-muted-foreground mb-2">
+                    {item.company}
+                    {('location' in item && item.location) ? ` — ${item.location}` : ''}
+                  </p>
+                  <p className="text-sm text-muted-foreground whitespace-pre-line">{item.description}</p>
                 </div>
               ))}
             </div>
