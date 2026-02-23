@@ -3,6 +3,18 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import { projects } from '../data/portfolio-data';
 
 export function Projects() {
+  const count = projects.length;
+
+  // Sur lg: on veut 3 cartes par ligne (4 colonnes chacune sur une grille 12).
+  // Cas particuliers:
+  // - 1 projet: centré (col-span 6 + col-start 4)
+  // - 2 projets: centrés (col-span 4, avec un "offset" d'1 colonne de chaque côté)
+  const getLgColClass = (index: number) => {
+    if (count === 1) return 'lg:col-span-6 lg:col-start-4';
+    if (count === 2) return index === 0 ? 'lg:col-span-4 lg:col-start-3' : 'lg:col-span-4';
+    return 'lg:col-span-4';
+  };
+
   return (
     <section id="projets" className="py-20 bg-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,11 +27,14 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-hidden hover:shadow-xl transition-shadow group"
+              className={
+                'bg-white rounded-xl overflow-hidden hover:shadow-xl transition-shadow group ' +
+                getLgColClass(index)
+              }
             >
               <div className="relative h-48 overflow-hidden">
                 <ImageWithFallback
@@ -30,9 +45,7 @@ export function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="mb-3">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm">
-                  {project.description}
-                </p>
+                <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span
@@ -44,7 +57,7 @@ export function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <a 
+                  <a
                     href={project.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -53,7 +66,7 @@ export function Projects() {
                     <ExternalLink size={16} />
                     Voir le projet
                   </a>
-                  <a 
+                  <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"

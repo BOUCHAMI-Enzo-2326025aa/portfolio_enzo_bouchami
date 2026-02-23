@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Brand } from './Brand';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -39,14 +40,11 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <button
+          <Brand
             onClick={() => scrollToSection('accueil')}
-            className="text-2xl hover:text-primary transition-colors"
-            style={{ fontFamily: 'var(--font-logo)' }}
-            aria-label="Aller à l'accueil"
-          >
-            Enzo Bouchami
-          </button>
+            logoSrc="/logo.png"
+            label="Enzo Bouchami"
+          />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">

@@ -81,7 +81,6 @@ export const skillCategories = [
       "SQL",
       "MongoDB",
       "PostgreSQL",
-      "Firebase",
       "MySQL",
     ],
   },
@@ -97,7 +96,7 @@ export const skillCategories = [
   },
   {
     title: "Outils",
-    skills: ["Git", "VS Code", "Docker", "Agile", "Jira"],
+    skills: ["Git", "VS Code", "PhpStorm", "Docker", "Agile"],
   },
   {
     title: "Soft Skills",
@@ -116,34 +115,24 @@ export const skillCategories = [
 // ========================================
 export const projects = [
   {
-    title: "Projet E-commerce",
+    title: "Projet SportHub",
     description:
-      "Développement d'une plateforme e-commerce complète avec système de paiement intégré et gestion des stocks.",
-    tags: ["React", "Node.js", "MongoDB"],
+      "Développement d'une plateforme de gestion d'événements sportifs avec fonctionnalités de réservation et de suivi de statistiques.",
+    tags: ["PHP", "MySQL"],
     image:
-      "https://images.unsplash.com/photo-1760071744047-5542cbfda184?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGRlc2lnbiUyMHBvcnRmb2xpb3xlbnwxfHx8fDE3NzE4NDgyNDl8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    demoLink: "#", // Lien vers la démo du projet
-    githubLink: "#", // Lien vers le code GitHub
+      "https://z5sport.com/wp-content/uploads/2024/10/392867619_8211s55263388644_4849514802513617031_n.jpg",
+    demoLink: "https://gestionsaetest.alwaysdata.net/accueil", // Lien vers la démo du projet
+    githubLink: "https://github.com/FOUCHER-Mathias-23022625/GestionSalleDeSportSAE", // Lien vers le code GitHub
   },
   {
-    title: "Application Mobile",
+    title: "Logiciel CRM pour VA-Productions",
     description:
-      "Conception et développement d'une application mobile de gestion de tâches avec synchronisation cloud.",
-    tags: ["React Native", "Firebase", "TypeScript"],
+      "Développement d'un CRM complet pour une PME de production de magazines publicitaires, intégrant la gestion de la prospection, des clients, des projets et de la facturation.",
+    tags: ["Express.js", "Node.js", "React", "MongoDB"],
     image:
-      "https://images.unsplash.com/photo-1516889454133-d3cd87326a6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXNrJTIwYmx1ZXxlbnwxfHx8fDE3NzE4NjUzNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    demoLink: "#",
-    githubLink: "#",
-  },
-  {
-    title: "Dashboard Analytique",
-    description:
-      "Création d'un tableau de bord interactif pour la visualisation de données complexes en temps réel.",
-    tags: ["Vue.js", "D3.js", "Python"],
-    image:
-      "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMHRlYW18ZW58MXx8fHwxNzcxODAxMTEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    demoLink: "#",
-    githubLink: "#",
+    "https://www.adimeo.com/hubfs/meilleurs-crm-2022.webp",
+    demoLink: "https://va-productions.vercel.app/",
+    githubLink: "https://github.com/BOUCHAMI-Enzo-2326025aa/VA-Productions",
   },
 ];
 
