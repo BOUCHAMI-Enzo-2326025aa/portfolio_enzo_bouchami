@@ -58,7 +58,7 @@ export function Contact() {
             Me <span className="text-primary">contacter</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            N'hésitez pas à me contacter pour toute opportunité ou question
+            N'hésitez pas à me contacter pour toute opportunité ou renseignement complémentaire.
           </p>
         </div>
 

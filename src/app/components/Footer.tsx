@@ -12,7 +12,7 @@ export function Footer() {
             © {currentYear} Portfolio. Tous droits réservés.
           </p>
           <p className="text-sm flex items-center gap-2">
-            Créé avec <Heart className="text-primary" size={16} fill="currentColor" /> par {personalInfo.firstName} {personalInfo.lastName}
+            Créé avec Figma par {personalInfo.firstName} {personalInfo.lastName}
           </p>
         </div>
       </div>

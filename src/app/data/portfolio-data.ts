@@ -152,23 +152,16 @@ export const projects = [
 // ========================================
 export const education = [
   {
-    year: "2024 - 2026",
-    title: "Master en [Domaine]",
-    institution: "École Supérieure / Université",
-    description: "Spécialisation en [spécialité] avec mention.",
+    year: "2023 - 2026",
+    title: "BUT Informatique",
+    institution: "IUT Aix-Marseille site d'Aix-en-Provence",
+    description: "Parcours A : Réalisation d’applications : conception, développement, validation",
   },
   {
-    year: "2021 - 2024",
-    title: "Licence [Domaine]",
-    institution: "Université",
-    description:
-      "Formation générale avec orientation vers [spécialité].",
-  },
-  {
-    year: "2021",
-    title: "Baccalauréat [Filière]",
-    institution: "Lycée",
-    description: "Mention Très Bien.",
+    year: "2023",
+    title: "Baccalauréat Général - Mention Bien",
+    institution: "Lycée Maurice Janetti",
+    description: "Spécialité Numérique et Sciences informatiques (NSI) et Mathématiques",
   },
 ];
 
@@ -177,24 +170,24 @@ export const education = [
 // ========================================
 export const experience = [
   {
-    year: "2025",
-    title: "Stage en [Domaine]",
-    company: "Entreprise XYZ",
+    year: "Mars 2026 - Juillet 2026",
+    title: "Stage en développement informatique",
+    company: "Métrpole Aix-Marseille-Provence",
     description:
-      "Participation au développement de [projet] et collaboration avec l'équipe [équipe].",
+      "Stage à venir",
   },
   {
-    year: "2024",
-    title: "Projet Associatif",
-    company: "Association étudiante",
+    year: "Avril 2025 - Juin 2025",
+    title: "Stage en développement informatique",
+    company: "Caisse nationale militaire de sécurité sociale (CNMSS)",
     description:
-      "Coordination d'événements et gestion d'une équipe de 10 personnes.",
+      "Modifications des applications web interne, développement de nouvelles fonctionnalités et correction de bugs.",
   },
   {
-    year: "2023",
-    title: "Projet Universitaire",
-    company: "Université",
+    year: "Septembre 2025 - Janvier 2026",
+    title: "Projet Universitaire VA-Productions",
+    company: "IUT Aix-Marseille site d'Aix-en-Provence",
     description:
-      "Développement d'un projet de fin d'année en équipe de 5 personnes.",
+      "Développement d'un CRM pour une PME de production de magazines publicitaires, allant de la prospection à la facturation en collaboration avec une équipe de 5 étudiants.",
   },
 ];
