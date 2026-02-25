@@ -3,6 +3,13 @@
 // ========================================
 // Modifiez les informations ci-dessous pour personnaliser votre portfolio
 
+
+
+import motoImage from "../../images/moto.jpeg";
+import motoImage2 from "../../images/moto2.jpeg";
+import motoImage3 from "../../images/moto3.jpeg";
+import zidaneImage from "../../images/zidane.jpeg";
+
 export const personalInfo = {
   // Informations personnelles
   firstName: "Enzo",
@@ -183,4 +190,34 @@ export const experience = [
     description:
       "Développement d'un CRM pour une PME de production de magazines publicitaires, allant de la prospection à la facturation en collaboration avec une équipe de 5 étudiants.",
   },
+];
+
+// ========================================
+// Centres d'intérets
+// ========================================
+
+export const passions = [
+  {
+    title: 'Football',
+    description:
+      "Le football a été ma  première passion. J'en ai pratiqué pendant 7 ans, de mes 8 à mes 15 ans. Mais même en dehors des terrains, je continue à adorer ce sport et à suivre les matchs de mes équipes préférées.",
+    tags: ['Esprit d équipe', 'Compétitif', 'Discipline'],
+    image: zidaneImage,
+  },
+  {
+    title: 'Moto',
+    description:
+        "Depuis mes 15 ans, j'ai la chance d'avoir une moto. Cette passion m'a permis d'avoir une certaine liberté et de découvrir le monde de la mécanique.",
+    tags: ['Mécanique', 'Aventure'],
+    image: motoImage,
+  },
+  {
+    title: 'Padel',
+    description:
+      "Le padel est ce nouveau sport de raquette que j'ai découvert récemment m'a de suite plus. Il m'a permis de me lancer un nouveau défi sportif avec mes amis.",
+    tags: ['Compétitif', 'Nouveauté'],
+    image:
+      'https://www.lautreusine.com/wp-content/uploads/2025/01/service-padel-lautre-usine-cholet-.jpg',
+  },
+
 ];

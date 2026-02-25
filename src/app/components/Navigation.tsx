@@ -28,6 +28,7 @@ export function Navigation() {
     { id: 'apropos', label: 'À propos' },
     { id: 'competences', label: 'Compétences' },
     { id: 'projets', label: 'Projets' },
+    { id: 'passions', label: 'Centres d’intérêt' },
     { id: 'parcours', label: 'Parcours' },
     { id: 'contact', label: 'Contact' },
   ];
