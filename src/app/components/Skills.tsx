@@ -1,13 +1,24 @@
-import { Code, Palette, Database, Globe, Zap, Users } from 'lucide-react';
+import { Code, Monitor, Server, Database, Layers3, Wrench, Users } from 'lucide-react';
 import { skillCategories as skillCategoriesData } from '../data/portfolio-data';
 
 export function Skills() {
-  const iconMap = [Code, Palette, Database, Globe, Zap, Users];
-  
-  const skillCategories = skillCategoriesData.map((category, index) => ({
-    ...category,
-    icon: iconMap[index] || Code,
-  }));
+  const skillCategories = skillCategoriesData.map((category) => {
+    const title = category.title.toLowerCase();
+    const has = (needle: string) => title.indexOf(needle) !== -1;
+
+    const icon = (() => {
+      // mapping “par intention” (plus robuste que l’index)
+      if (has('frontend') || has('front')) return Monitor;
+      if (has('backend') || has('back')) return Server;
+      if (has('framework')) return Layers3;
+      if (has('base') || has('donné') || has('data')) return Database;
+      if (has('outil')) return Wrench;
+      if (has('soft')) return Users;
+      return Code;
+    })();
+
+    return { ...category, icon };
+  });
 
   return (
     <section id="competences" className="py-20 bg-white">

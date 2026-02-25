@@ -56,23 +56,20 @@ export const aboutParagraphs = [
 // ========================================
 export const skillCategories = [
   {
-    title: "Développement",
+    title: "Développement Frontend",
     skills: [
-      "HTML/CSS",
       "JavaScript",
-      "React",
-      "Python",
-      "Java",
+        "TypeScript",
+      "HTML/CSS",
     ],
   },
   {
-    title: "Design",
+    title: "Developpement Backend",
     skills: [
-      "Figma",
-      "Adobe XD",
-      "Photoshop",
-      "Illustrator",
-      "UI/UX",
+      "Node.js",
+      "Python",
+      "Java",
+      "PHP",
     ],
   },
   {
@@ -85,13 +82,15 @@ export const skillCategories = [
     ],
   },
   {
-    title: "Web",
+    title: "Frameworks",
     skills: [
-      "SEO",
-      "Responsive Design",
-      "APIs",
-      "Node.js",
-      "Express",
+      "Symfony",
+      "React",
+      "Vue.js",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Express.js",
+      "Laravel",
     ],
   },
   {
