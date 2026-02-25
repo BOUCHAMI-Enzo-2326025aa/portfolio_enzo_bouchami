@@ -6,8 +6,8 @@
 
 
 import motoImage from "../../images/moto.jpeg";
-import motoImage2 from "../../images/moto2.jpeg";
-import motoImage3 from "../../images/moto3.jpeg";
+//import motoImage2 from "../../images/moto2.jpeg";
+//import motoImage3 from "../../images/moto3.jpeg";
 import zidaneImage from "../../images/zidane.jpeg";
 
 export const personalInfo = {
