@@ -1,4 +1,3 @@
-
 ## Portfolio d'Enzo Bouchami
 
 Portfolio React + Vite conçu pour présenter un profil à des écoles supérieures et des entreprises.
@@ -32,6 +31,25 @@ npm run build
 npm run preview
 ```
 
+## Formulaire de contact (envoi d'email)
+
+Le formulaire "Me contacter" envoie un email via **EmailJS** (fonctionne sur un hébergement statique).
+
+1) Crée un compte et configure EmailJS : https://www.emailjs.com/
+   - Ajoute un **Email Service**
+   - Crée un **Email Template**
+2) Crée un fichier `.env` à la racine (copie de `.env.example`) et renseigne :
+   - `VITE_EMAILJS_SERVICE_ID`
+   - `VITE_EMAILJS_TEMPLATE_ID`
+   - `VITE_EMAILJS_PUBLIC_KEY`
+3) Dans ton template EmailJS, utilise ces variables (ou adapte le code) :
+   - `from_name`
+   - `reply_to`
+   - `subject`
+   - `message`
+
+> Note : `.env` est ignoré par git (sécurité). Ne le commit pas.
+
 ## Personnalisation
 
 Le contenu principal est centralisé dans :
@@ -41,4 +59,3 @@ Le contenu principal est centralisé dans :
 Guide détaillé :
 
 `GUIDE_PERSONNALISATION.md`
-  

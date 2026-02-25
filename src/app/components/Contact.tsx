@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { personalInfo } from '../data/portfolio-data';
 
 export function Contact() {
@@ -10,11 +11,71 @@ export function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Champ anti-spam (doit rester vide). S'il est rempli, on ignore l'envoi.
+  const [website, setWebsite] = useState('');
+
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState<null | { type: 'success' | 'error'; message: string }>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    alert('Message envoyé ! (Démo)');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+
+    // Honeypot
+    if (website.trim().length > 0) {
+      setStatus({
+        type: 'success',
+        message: 'Message envoyé.',
+      });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setWebsite('');
+      return;
+    }
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string | undefined;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string | undefined;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus({
+        type: 'error',
+        message:
+          "Le formulaire n'est pas configuré (variables EmailJS manquantes). Ajoute-les dans .env (voir .env.example).",
+      });
+      return;
+    }
+
+    setIsSending(true);
+    setStatus(null);
+
+    try {
+      // Les noms de variables doivent correspondre à ton template EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          reply_to: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          // optionnel : pour l'afficher dans le template
+          to_email: personalInfo.email,
+        },
+        {
+          publicKey,
+        },
+      );
+
+      setStatus({ type: 'success', message: 'Merci ! Votre message a bien été envoyé.' });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setWebsite('');
+    } catch (err) {
+      setStatus({
+        type: 'error',
+        message: "Oups, l'envoi a échoué. Réessaie dans quelques minutes ou contacte-moi directement par email.",
+      });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const contactInfo = [
@@ -93,16 +154,41 @@ export function Contact() {
 
             <div className="bg-primary/10 border border-primary/20 rounded-lg p-6">
               <h4 className="mb-2">Disponibilité</h4>
-              <p className="text-sm text-muted-foreground">
-                {personalInfo.availability}
-              </p>
+              <p className="text-sm text-muted-foreground">{personalInfo.availability}</p>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="bg-white p-8 rounded-xl">
             <h3 className="mb-6">Envoyez-moi un message</h3>
+
+            {status && (
+              <div
+                className={`mb-4 rounded-lg border p-3 text-sm ${
+                  status.type === 'success'
+                    ? 'border-emerald-200 bg-emerald-50 text-emerald-800'
+                    : 'border-red-200 bg-red-50 text-red-800'
+                }`}
+                role="status"
+              >
+                {status.message}
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Honeypot (caché) */}
+              <div className="hidden" aria-hidden="true">
+                <label htmlFor="website">Website</label>
+                <input
+                  id="website"
+                  type="text"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={website}
+                  onChange={(e) => setWebsite(e.target.value)}
+                />
+              </div>
+
               <div>
                 <label htmlFor="name" className="block mb-2 text-sm">
                   Nom complet
@@ -114,6 +200,7 @@ export function Contact() {
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   required
+                  maxLength={80}
                 />
               </div>
               <div>
@@ -127,6 +214,7 @@ export function Contact() {
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   required
+                  maxLength={120}
                 />
               </div>
               <div>
@@ -140,6 +228,7 @@ export function Contact() {
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   required
+                  maxLength={120}
                 />
               </div>
               <div>
@@ -153,14 +242,20 @@ export function Contact() {
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   required
+                  maxLength={2000}
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2"
+                disabled={isSending}
+                className={`w-full py-3 rounded-lg transition-colors flex items-center justify-center gap-2 ${
+                  isSending
+                    ? 'bg-primary/60 text-white cursor-not-allowed'
+                    : 'bg-primary text-white hover:bg-primary/90'
+                }`}
               >
                 <Send size={18} />
-                Envoyer le message
+                {isSending ? 'Envoi…' : 'Envoyer le message'}
               </button>
             </form>
           </div>
