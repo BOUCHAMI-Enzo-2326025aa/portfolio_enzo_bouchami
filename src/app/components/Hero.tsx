@@ -40,16 +40,16 @@ export function Hero() {
               </button>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative mx-auto w-full max-w-[13rem] sm:max-w-[15rem] lg:max-w-[18rem]">
             <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
               <ImageWithFallback
                 src={personalInfo.profileImage}
-                alt="Workspace"
+                alt="Portrait d'Enzo Bouchami"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-2xl -z-10"></div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10"></div>
+            <div className="absolute -bottom-5 -right-5 w-24 h-24 bg-primary rounded-2xl -z-10"></div>
+            <div className="absolute -top-5 -left-5 w-24 h-24 bg-primary/10 rounded-2xl -z-10"></div>
           </div>
         </div>
       </div>

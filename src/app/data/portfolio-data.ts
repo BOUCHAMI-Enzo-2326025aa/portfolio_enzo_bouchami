@@ -9,6 +9,7 @@ import motoImage from "../../images/moto.jpeg";
 //import motoImage2 from "../../images/moto2.jpeg";
 //import motoImage3 from "../../images/moto3.jpeg";
 import zidaneImage from "../../images/zidane.jpeg";
+import voyageImage from "../../images/voyage.jpg";
 
 export const personalInfo = {
   // Informations personnelles
@@ -27,8 +28,7 @@ export const personalInfo = {
   github: "https://github.com/BOUCHAMI-Enzo-2326025aa",
 
   // Image de profil (optionnel)
-  profileImage:
-    "https://images.unsplash.com/photo-1516889454133-d3cd87326a6b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXNrJTIwYmx1ZXxlbnwxfHx8fDE3NzE4NjUzNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  profileImage: "/Portrait-BOUCHAMI-Enzo.png",
 };
 
 // ========================================
@@ -53,9 +53,10 @@ export const aboutFeatures = [
 ];
 
 export const aboutParagraphs = [
-  "Passionné(e) par [domaine d'intérêt], j'ai développé au fil de mes études et expériences une expertise solide dans [compétences principales]. Mon parcours m'a permis d'acquérir une vision globale et une approche méthodique des projets.",
+  "Passionné par la conception et le développement de logiciels informatiques, j'ai acquis au fil de mes études de nombreuses expériences et développé une expertise solide dans ce domaine. Mon parcours m'a permis d'acquérir une vision globale et une approche méthodique des projets sur lesquels je travaille.",
   "Je suis constamment à la recherche de nouveaux défis qui me permettront de mettre en pratique mes connaissances tout en continuant à apprendre. Ma curiosité naturelle et mon esprit d'analyse me permettent de m'adapter rapidement à de nouveaux environnements.",
-  "Mon objectif est d'intégrer une structure qui valorise l'innovation, le travail d'équipe et le développement continu des compétences.",
+  "Mon objectif est d'intégrer une structure qui valorise l'innovation, le travail d'équipe et le développement continu des compétences."
+
 ];
 
 // ========================================
@@ -172,7 +173,7 @@ export const experience = [
     company: "Métropole Aix-Marseille-Provence",
     location: "Marseille",
     description:
-      "Stage à venir",
+      "Stage en cours : conception et développement d'une application web de création et gestion de QR codes dynamiques.",
   },
   {
     year: "Avril 2025 - Juin 2025",
