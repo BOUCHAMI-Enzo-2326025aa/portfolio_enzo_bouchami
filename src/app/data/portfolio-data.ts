@@ -28,7 +28,7 @@ export const personalInfo = {
   github: "https://github.com/BOUCHAMI-Enzo-2326025aa",
 
   // Image de profil (optionnel)
-  profileImage: "/Portrait-BOUCHAMI-Enzo.png",
+  profileImage: "/Portrait-BOUCHAMI-Enzo.jpeg",
 };
 
 // ========================================
