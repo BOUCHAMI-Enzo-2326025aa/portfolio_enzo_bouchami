@@ -3,13 +3,12 @@
 // ========================================
 // Modifiez les informations ci-dessous pour personnaliser votre portfolio
 
-
-
 import motoImage from "../../images/moto.jpeg";
 //import motoImage2 from "../../images/moto2.jpeg";
 //import motoImage3 from "../../images/moto3.jpeg";
 import zidaneImage from "../../images/zidane.jpeg";
 import voyageImage from "../../images/voyage.jpg";
+import qrampImage from "../../images/stats-qrcode.png";
 
 export const personalInfo = {
   // Informations personnelles
@@ -55,8 +54,7 @@ export const aboutFeatures = [
 export const aboutParagraphs = [
   "Passionné par la conception et le développement de logiciels informatiques, j'ai acquis au fil de mes études de nombreuses expériences et développé une expertise solide dans ce domaine. Mon parcours m'a permis d'acquérir une vision globale et une approche méthodique des projets sur lesquels je travaille.",
   "Je suis constamment à la recherche de nouveaux défis qui me permettront de mettre en pratique mes connaissances tout en continuant à apprendre. Ma curiosité naturelle et mon esprit d'analyse me permettent de m'adapter rapidement à de nouveaux environnements.",
-  "Mon objectif est d'intégrer une structure qui valorise l'innovation, le travail d'équipe et le développement continu des compétences."
-
+  "Mon objectif est d'intégrer une structure qui valorise l'innovation, le travail d'équipe et le développement continu des compétences.",
 ];
 
 // ========================================
@@ -65,29 +63,15 @@ export const aboutParagraphs = [
 export const skillCategories = [
   {
     title: "Développement Frontend",
-    skills: [
-      "JavaScript",
-        "TypeScript",
-      "HTML/CSS",
-    ],
+    skills: ["JavaScript", "TypeScript", "HTML/CSS"],
   },
   {
     title: "Developpement Backend",
-    skills: [
-      "Node.js",
-      "Python",
-      "Java",
-      "PHP",
-    ],
+    skills: ["Node.js", "Python", "Java", "PHP"],
   },
   {
     title: "Bases de données",
-    skills: [
-      "SQL",
-      "MongoDB",
-      "PostgreSQL",
-      "MySQL",
-    ],
+    skills: ["SQL", "MongoDB", "PostgreSQL", "MySQL"],
   },
   {
     title: "Frameworks",
@@ -122,6 +106,15 @@ export const skillCategories = [
 // ========================================
 export const projects = [
   {
+    title: "Projet QR AMP",
+    description:
+      "Développement d'une application web dans le cadre de mon stage à la Métropole Aix-Marseille-Provence. L'application permet de créer et gérer des QR codes dynamiques pour faciliter l'accès à des informations et services ( comme les statistiques).",
+    tags: ["Symfony", "Bootstrap", "JavaScript", "MySQL", "Keycloak"],
+    image: qrampImage,
+    demoLink: "Serveur intranet AMP",
+    githubLink: "https://github.com/BOUCHAMI-Enzo-2326025aa/QRamp", // Lien vers le code GitHub
+  },
+  {
     title: "Projet SportHub",
     description:
       "Développement d'une plateforme de gestion d'événements sportifs avec fonctionnalités de réservation et de suivi de statistiques.",
@@ -129,15 +122,15 @@ export const projects = [
     image:
       "https://z5sport.com/wp-content/uploads/2024/10/392867619_8211s55263388644_4849514802513617031_n.jpg",
     demoLink: "https://gestionsaetest.alwaysdata.net/accueil", // Lien vers la démo du projet
-    githubLink: "https://github.com/FOUCHER-Mathias-23022625/GestionSalleDeSportSAE", // Lien vers le code GitHub
+    githubLink:
+      "https://github.com/FOUCHER-Mathias-23022625/GestionSalleDeSportSAE", // Lien vers le code GitHub
   },
   {
     title: "Logiciel CRM pour VA-Productions",
     description:
       "Développement d'un CRM complet pour une PME de production de magazines publicitaires, intégrant la gestion de la prospection, des clients, des projets et de la facturation.",
     tags: ["Express.js", "Node.js", "React", "MongoDB"],
-    image:
-    "https://www.adimeo.com/hubfs/meilleurs-crm-2022.webp",
+    image: "https://www.adimeo.com/hubfs/meilleurs-crm-2022.webp",
     demoLink: "https://va-productions.vercel.app/",
     githubLink: "https://github.com/BOUCHAMI-Enzo-2326025aa/VA-Productions",
   },
@@ -151,15 +144,17 @@ export const education = [
     year: "2023 - 2026",
     title: "BUT Informatique",
     institution: "IUT Aix-Marseille",
-    location : "Aix-en-Provence",
-    description: "Parcours A : Réalisation d’applications : conception, développement, validation",
+    location: "Aix-en-Provence",
+    description:
+      "Parcours A : Réalisation d’applications : conception, développement, validation",
   },
   {
     year: "2023",
     title: "Baccalauréat Général - Mention Bien",
     institution: "Lycée Maurice Janetti",
-    location : "Saint-Maximin-la-Sainte-Baume",
-    description: "Spécialité Numérique et Sciences informatiques (NSI) et Mathématiques",
+    location: "Saint-Maximin-la-Sainte-Baume",
+    description:
+      "Spécialité Numérique et Sciences informatiques (NSI) et Mathématiques",
   },
 ];
 
@@ -199,26 +194,25 @@ export const experience = [
 
 export const passions = [
   {
-    title: 'Football',
+    title: "Football",
     description:
       "Le football a été ma  première passion. J'en ai pratiqué pendant 7 ans, de mes 8 à mes 15 ans. Mais même en dehors des terrains, je continue à adorer ce sport et à suivre les matchs de mes équipes préférées.",
-    tags: ['Esprit d équipe', 'Compétitif', 'Discipline'],
+    tags: ["Esprit d équipe", "Compétitif", "Discipline"],
     image: zidaneImage,
   },
   {
-    title: 'Moto',
+    title: "Moto",
     description:
-        "Depuis mes 15 ans, j'ai la chance d'avoir une moto. Cette passion m'a permis d'avoir une certaine liberté et de découvrir le monde de la mécanique.",
-    tags: ['Mécanique', 'Aventure'],
+      "Depuis mes 15 ans, j'ai la chance d'avoir une moto. Cette passion m'a permis d'avoir une certaine liberté et de découvrir le monde de la mécanique.",
+    tags: ["Mécanique", "Aventure"],
     image: motoImage,
   },
   {
-    title: 'Padel',
+    title: "Padel",
     description:
       "Le padel est ce nouveau sport de raquette que j'ai découvert récemment m'a de suite plus. Il m'a permis de me lancer un nouveau défi sportif avec mes amis.",
-    tags: ['Compétitif', 'Nouveauté'],
+    tags: ["Compétitif", "Nouveauté"],
     image:
-      'https://www.lautreusine.com/wp-content/uploads/2025/01/service-padel-lautre-usine-cholet-.jpg',
+      "https://www.lautreusine.com/wp-content/uploads/2025/01/service-padel-lautre-usine-cholet-.jpg",
   },
-
 ];
