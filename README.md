@@ -25,10 +25,12 @@ npm run dev
 npm run build
 ```
 
-### 4) Prévisualiser le build localement
+### 4) Envoyer au serveur distant le dossier dist/ généré en amont
+
+Précision : se mettre en partage de co si wifi entreprise. 
 
 ```bash
-npm run preview
+scp -r ./dist/* enzo-bouchami@ssh-enzo-bouchami.alwaysdata.net:~/www/
 ```
 
 ## Formulaire de contact (envoi d'email)
