@@ -1,6 +1,6 @@
-import { ExternalLink, Github } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { projects } from '../data/portfolio-data';
+import { ExternalLink, Github } from "lucide-react";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { projects } from "../data/portfolio-data";
 
 export function Projects() {
   const count = projects.length;
@@ -10,9 +10,10 @@ export function Projects() {
   // - 1 projet: centré (col-span 6 + col-start 4)
   // - 2 projets: centrés (col-span 4, avec un "offset" d'1 colonne de chaque côté)
   const getLgColClass = (index: number) => {
-    if (count === 1) return 'lg:col-span-6 lg:col-start-4';
-    if (count === 2) return index === 0 ? 'lg:col-span-4 lg:col-start-3' : 'lg:col-span-4';
-    return 'lg:col-span-4';
+    if (count === 1) return "lg:col-span-6 lg:col-start-4";
+    if (count === 2)
+      return index === 0 ? "lg:col-span-4 lg:col-start-3" : "lg:col-span-4";
+    return "lg:col-span-4";
   };
 
   return (
@@ -23,7 +24,8 @@ export function Projects() {
             Mes <span className="text-primary">projets</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Une sélection de projets personnels et académiques qui illustrent mes compétences
+            Une sélection de projets personnels et académiques qui illustrent
+            mes compétences
           </p>
         </div>
 
@@ -32,7 +34,7 @@ export function Projects() {
             <div
               key={index}
               className={
-                'bg-white rounded-xl overflow-hidden hover:shadow-xl transition-shadow group ' +
+                "bg-white rounded-xl overflow-hidden hover:shadow-xl transition-shadow group " +
                 getLgColClass(index)
               }
             >
@@ -45,7 +47,9 @@ export function Projects() {
               </div>
               <div className="p-6">
                 <h3 className="mb-3">{project.title}</h3>
-                <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
+                <p className="text-muted-foreground mb-4 text-sm">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag, tagIndex) => (
                     <span
@@ -57,15 +61,17 @@ export function Projects() {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-primary hover:underline"
-                  >
-                    <ExternalLink size={16} />
-                    Voir le projet
-                  </a>
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-primary hover:underline"
+                    >
+                      <ExternalLink size={16} />
+                      Voir le projet
+                    </a>
+                  )}
                   <a
                     href={project.githubLink}
                     target="_blank"

@@ -67,7 +67,11 @@ export const skillCategories = [
   },
   {
     title: "Developpement Backend",
-    skills: ["Node.js", "Python", "Java", "PHP"],
+    skills: ["Node.js", "PHP", "Firebase"],
+  },
+  {
+    title: "Développement logiciel (Applications lourdes)",
+    skills: ["Java", "Python", "C++", "Programmation Orientée Objet"],
   },
   {
     title: "Bases de données",
@@ -83,11 +87,20 @@ export const skillCategories = [
       "Bootstrap",
       "Express.js",
       "Laravel",
+      "Expo",
     ],
   },
   {
     title: "Outils",
-    skills: ["Git", "VS Code", "PhpStorm", "Docker", "Agile"],
+    skills: [
+      "Git",
+      "VS Code",
+      "PhpStorm",
+      "Docker",
+      "Agile",
+      "Keycloak",
+      "Figma",
+    ],
   },
   {
     title: "Soft Skills",
@@ -97,6 +110,7 @@ export const skillCategories = [
       "Adaptabilité",
       "Créativité",
       "Organisation",
+      "Résolution de problèmes",
     ],
   },
 ];
@@ -111,7 +125,7 @@ export const projects = [
       "Développement d'une application web dans le cadre de mon stage à la Métropole Aix-Marseille-Provence. L'application permet de créer et gérer des QR codes dynamiques pour faciliter l'accès à des informations et services ( comme les statistiques).",
     tags: ["Symfony", "Bootstrap", "JavaScript", "MySQL", "Keycloak"],
     image: qrampImage,
-    demoLink: "Serveur intranet AMP",
+    //demoLink: "Serveur intranet AMP",
     githubLink: "https://github.com/BOUCHAMI-Enzo-2326025aa/QRamp", // Lien vers le code GitHub
   },
   {
