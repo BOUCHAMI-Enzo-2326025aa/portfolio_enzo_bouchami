@@ -27,24 +27,24 @@ npm run build
 
 ### 4) Envoyer au serveur distant le dossier dist/ généré en amont
 
-Précision : se mettre en partage de co si wifi entreprise. 
+Précision : se mettre en partage de co si wifi entreprise.
 
 ```bash
-scp -r ./dist/* enzo-bouchami@ssh-enzo-bouchami.alwaysdata.net:~/www/
+scp -r ./dist/* enzo-bouchami@ssh-enzo-bouchami.alwaysdata.net:~/www/dist/
 ```
 
 ## Formulaire de contact (envoi d'email)
 
 Le formulaire "Me contacter" envoie un email via **EmailJS** (fonctionne sur un hébergement statique).
 
-1) Crée un compte et configure EmailJS : https://www.emailjs.com/
+1. Crée un compte et configure EmailJS : https://www.emailjs.com/
    - Ajoute un **Email Service**
    - Crée un **Email Template**
-2) Crée un fichier `.env` à la racine (copie de `.env.example`) et renseigne :
+2. Crée un fichier `.env` à la racine (copie de `.env.example`) et renseigne :
    - `VITE_EMAILJS_SERVICE_ID`
    - `VITE_EMAILJS_TEMPLATE_ID`
    - `VITE_EMAILJS_PUBLIC_KEY`
-3) Dans ton template EmailJS, utilise ces variables (ou adapte le code) :
+3. Dans ton template EmailJS, utilise ces variables (ou adapte le code) :
    - `from_name`
    - `reply_to`
    - `subject`
